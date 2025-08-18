@@ -1,3 +1,12 @@
 [workspace]
 resolver = "3"
-members = [ "actix-authn","actix-chain","actix-fastcgi", "actix-modsecurity", "actix-revproxy", "actix-rewrite", "actix-sanitize"]
+members = [
+  "actix-authn",
+  "actix-chain",
+  "actix-fastcgi",
+  "actix-ipware",
+  "actix-modsecurity",
+  "actix-revproxy",
+  "actix-rewrite",
+  "actix-sanitize"
+]

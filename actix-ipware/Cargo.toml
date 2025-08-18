@@ -1,0 +1,9 @@
+[package]
+name = "actix-ipware"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+actix-web = { version = "4.11.0", default-features = false }
+futures-core = { version = "0.3.31", default-features = false }
+ipware = { git = "https://github.com/imgurbot12/ipware", version = "0.3.0", default-features = false, features = ["actix"] }
