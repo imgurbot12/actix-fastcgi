@@ -11,10 +11,11 @@ use futures_core::future::LocalBoxFuture;
 use ipware::IpWare;
 
 /// Unique IP type to apply to [`actix_web::dev::Extensions`]
-pub struct PeerAddr(pub Option<SocketAddr>);
+#[derive(Clone, Debug)]
+pub struct PeerAddr(pub SocketAddr);
 
 /// Behavior Controls for IpWare Middleware.
-#[derive(Clone)]
+#[derive(Clone, Debug)]
 pub enum Behavior {
     /// Overwrite existing peer-address and add original to extensions as [`PeerAddr`]
     Overwrite,
@@ -66,11 +67,14 @@ where
                     if let Some(ip) = ip {
                         req.head_mut().peer_addr = Some((ip, port).into());
                     }
-                    req.extensions_mut().insert(PeerAddr(peer));
+                    if let Some(peer) = peer {
+                        req.extensions_mut().insert(PeerAddr(peer));
+                    }
                 }
                 Behavior::Extension => {
-                    let peer = PeerAddr(ip.map(|ip| (ip, port).into()));
-                    req.extensions_mut().insert(peer);
+                    if let Some(ip) = ip {
+                        req.extensions_mut().insert(PeerAddr((ip, port).into()));
+                    }
                 }
             }
 

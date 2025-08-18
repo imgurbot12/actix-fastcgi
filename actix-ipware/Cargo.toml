@@ -7,3 +7,6 @@ edition = "2024"
 actix-web = { version = "4.11.0", default-features = false }
 futures-core = { version = "0.3.31", default-features = false }
 ipware = { git = "https://github.com/imgurbot12/ipware", version = "0.3.0", default-features = false, features = ["actix"] }
+
+[dev-dependencies]
+actix-web = { version = "4.11.0", default-features = false, features = ["macros"] }
