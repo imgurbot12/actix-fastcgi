@@ -8,7 +8,6 @@ default     = []
 rustls-0_23 = ['awc/rustls-0_23', 'awc/rustls-0_23-webpki-roots']
 
 [dependencies]
-actix-files = { git = "https://github.com/imgurbot12/actix-web.git", branch = "feat/pathbuf", version = "0.6.6" }
 actix-service = "2.0.3"
 actix-web = { version = "4.11.0", default-features = false }
 awc = { git = "https://github.com/imgurbot12/actix-web.git", branch = "develop", version = "3.7.0" }

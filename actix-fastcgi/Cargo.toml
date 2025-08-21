@@ -4,11 +4,9 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-actix-files = { git = "https://github.com/imgurbot12/actix-web.git", branch = "feat/pathbuf", version = "0.6.6" }
-actix-http = { version = "3.11.0", default-features = false }
+actix-files = { git = "https://github.com/imgurbot12/actix-web.git", branch = "develop", version = "0.6.6" }
 actix-service = "2.0.3"
 actix-web = { version = "4.11.0", default-features = false }
-actix-web-lab = { version = "0.24.2", default-features = false }
 deadpool = { version = "0.12.2", features = ["managed"], default-features = false }
 derive_more = { version = "2.0.1", features = ["display"] }
 fastcgi-client = "0.10.0"
