@@ -1,0 +1,13 @@
+[package]
+name = "actix-timeout"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+actix-web = { version = "4.11.0", default-features = false }
+derive_more = { version = "2.0.1", features = ["display", "from", "error"] }
+futures-core = { version = "0.3.31", default-features = false }
+pin-project-lite = "0.2.16"
+
+[dev-dependencies]
+actix-web = { version = "4.11.0", default-features = false, features = ["macros"] }

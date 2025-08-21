@@ -267,6 +267,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "actix-timeout"
+version = "0.1.0"
+dependencies = [
+ "actix-web",
+ "derive_more 2.0.1",
+ "futures-core",
+ "pin-project-lite",
+]
+
+[[package]]
 name = "actix-tls"
 version = "3.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"

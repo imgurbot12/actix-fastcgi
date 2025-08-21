@@ -8,5 +8,6 @@ members = [
   "actix-modsecurity",
   "actix-revproxy",
   "actix-rewrite",
-  "actix-sanitize"
+  "actix-sanitize",
+  "actix-timeout",
 ]
